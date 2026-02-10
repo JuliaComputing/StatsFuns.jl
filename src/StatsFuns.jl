@@ -264,10 +264,7 @@ export
 
 ## source files
 include("misc.jl")
-include("rmath.jl")
 include("tvpack.jl")
-
-using .RFunctions
 
 include("distrs/beta.jl")
 include("distrs/binom.jl")

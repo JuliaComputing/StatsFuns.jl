@@ -1,18 +1,5 @@
 # functions related to binomial distribution
 
-# R implementations
-using .RFunctions:
-    # binompdf,
-    # binomlogpdf,
-    # binomcdf,
-    # binomccdf,
-    # binomlogcdf,
-    # binomlogccdf,
-    binominvcdf,
-    binominvccdf,
-    binominvlogcdf,
-    binominvlogccdf
-
 # Julia implementations
 binompdf(n::Real, p::Real, k::Real) = exp(binomlogpdf(n, p, k))
 

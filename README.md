@@ -264,4 +264,4 @@ wilcoxinvlogccdf,    # inverse-logccdf of Wilcox distribution
 
 ## License
 
-All of the code for this package is released under the MIT/Expat license, but this package depends upon the Rmath.jl package, which currently links to a GPL-licensed library. As such, the package currently constitutes a derived work. Work is underway to remove that dependency.
+All of the code for this package is released under the MIT/Expat license

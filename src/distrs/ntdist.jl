@@ -1,16 +1,5 @@
 # functions related to noncentral T distribution
 
-# R implementations
-using .RFunctions:
-    ntdistcdf,
-    ntdistccdf,
-    ntdistlogcdf,
-    ntdistlogccdf,
-    ntdistinvcdf,
-    ntdistinvccdf,
-    ntdistinvlogcdf,
-    ntdistinvlogccdf
-
 using SpecialFunctions: gamma
 
 function ntdistpdf(k::Real, λ::Real, x::Real)

@@ -8,13 +8,6 @@
 #
 # The probability mass function is (k + r - 1 \choose k) p^r (1-p)^k
 
-# R implementations
-using .RFunctions:
-    nbinominvcdf,
-    nbinominvccdf,
-    nbinominvlogcdf,
-    nbinominvlogccdf
-
 nbinompdf(r::Real, p::Real, k::Real) = exp(nbinomlogpdf(r, p, k))
 
 nbinomlogpdf(r::Real, p::Real, k::Real) = nbinomlogpdf(promote(r, p, k)...)

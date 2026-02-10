@@ -1,18 +1,5 @@
 # functions related to Poisson distribution
 
-# R implementations
-using .RFunctions:
-    # poispdf,
-    # poislogpdf,
-    # poiscdf,
-    # poisccdf,
-    # poislogcdf,
-    # poislogccdf,
-    poisinvcdf,
-    poisinvccdf,
-    poisinvlogcdf,
-    poisinvlogccdf
-
 # Julia implementations
 poispdf(λ::Real, x::Real) = exp(poislogpdf(λ, x))
 

@@ -2,19 +2,6 @@
 
 using HypergeometricFunctions: _₁F₁
 
-# R implementations
-using .RFunctions:
-    # gammapdf,
-    # gammalogpdf,
-    # gammacdf,
-    # gammaccdf,
-    # gammalogcdf,
-    # gammalogccdf,
-    # gammainvcdf,
-    # gammainvccdf,
-    gammainvlogcdf,
-    gammainvlogccdf
-
 # Julia implementations
 gammapdf(k::Real, θ::Real, x::Real) = exp(gammalogpdf(k, θ, x))
 
@@ -107,3 +94,14 @@ function gammainvccdf(k::Real, θ::Real, p::Real)
     _k, _θ, _p = promote(k, θ, p)
     return _θ * gamma_inc_inv(_k, 1 - _p, _p)
 end
+
+function gammainvlogcdf(k::Real, θ::Real, p::Real)
+    _k, _θ, _p = promote(k, θ, p)
+    return log(_θ) + log(gamma_inc_inv(_k, _p, 1 - _p))
+end
+
+function gammainvlogccdf(k::Real, θ::Real, p::Real)
+    _k, _θ, _p = promote(k, θ, p)
+    return log(_θ) + log(gamma_inc_inv(_k, 1 - _p, _p))
+end
+
